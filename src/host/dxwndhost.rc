@@ -1,0 +1,462 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\dxwndhost.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Japanese resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\og16x16.ico"
+IDI_ICONMFC             ICON    DISCARDABLE     "res\\mfxtext2.ico"
+IDR_MFXTEXTYPE          ICON    DISCARDABLE     "res\\dxwndhostDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Execute",                    ID_RUN
+        MENUITEM "&Modify",                     ID_MODIFY
+        MENUITEM "&Delete",                     ID_DELETE
+        MENUITEM "&Add",                        ID_ADD
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Version",                    ID_APP_ABOUT
+    END
+END
+
+IDR_MENU_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "index0"
+    BEGIN
+        MENUITEM "&Execute (E)",                ID_PRUN
+        MENUITEM "&Modify (M)",                 ID_PMODIFY
+        MENUITEM "&Delete (D)",                 ID_PDELETE
+        MENUITEM "&Add (A)",                    ID_PADD
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 208, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DXWnd Version Info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_ICONMFC,IDC_STATIC,12,29,21,20
+    LTEXT           "",IDC_VERSION,11,10,136,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004 SFB7",IDC_STATIC,43,40,97,8
+    DEFPUSHBUTTON   "OK",IDOK,151,7,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,12,62,21,20
+    LTEXT           "Fullscreen patch, FPS limit patch, bug fixing\nby http://www.old-games.ru",
+                    IDC_STATIC,44,66,152,23
+END
+
+IDD_TARGET DIALOGEX 0, 0, 259, 250
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Target Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FILE,5,10,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OPEN,235,10,15,14
+    CONTROL         "Do not Notify on State Change",IDC_UNNOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,235,113,10
+    CONTROL         "Hook DirectInput",IDC_HOOKDI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,169,70,10
+    EDITTEXT        IDC_INITX,18,198,16,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_INITY,44,198,16,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_MINX,70,198,16,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_MINY,92,198,16,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXX,120,198,16,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXY,142,198,16,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    CONTROL         "Auto-Correct Mouse Position",IDC_MODIFYMOUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,130,105,10
+    CONTROL         "Enable",IDC_OUTTRACE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,186,130,55,10
+    CONTROL         "Reduce CPU Load",IDC_SAVELOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,70,75,10
+    DEFPUSHBUTTON   "OK",IDOK,180,203,30,14
+    PUSHBUTTON      "Cancel",IDCANCEL,220,203,30,14
+    LTEXT           "Initial Coordinates and Moveable Range",IDC_STATIC,10,
+                    185,127,8
+    CONTROL         "X",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,10,201,8,8
+    CONTROL         "Y",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,38,201,8,8
+    CONTROL         "(",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,66,201,8,8
+    CONTROL         ",",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,88,201,8,8
+    CONTROL         ")-(",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,110,201,8,
+                    8
+    CONTROL         ",",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,138,201,8,8
+    CONTROL         ")",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,160,203,8,8
+    CONTROL         "Fullscreen",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,99,48,10
+    CONTROL         "Show",IDC_SHOWFPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    170,40,34,10
+    EDITTEXT        IDC_FPSLIMITVAL,203,53,24,12,ES_RIGHT | ES_AUTOHSCROLL,
+                    WS_EX_RIGHT
+    CONTROL         "Limit",IDC_FPSLIMIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,55,30,10,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_MODES,61,83,85,210,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Don't Hide Mouse Pointer",IDC_HIDEMOUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,143,97,10
+    COMBOBOX        IDC_SURFACETYPE,76,66,69,57,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Colour Convert",IDC_COLCONVERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,85,40,63,10
+    GROUPBOX        "Video",IDC_STATIC,5,30,150,83
+    GROUPBOX        "Input",IDC_STATIC,5,119,165,98
+    CONTROL         "Extended Log",IDC_EXTDEBUG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,186,144,60,8
+    GROUPBOX        "Debug Log",IDC_STATIC,180,119,71,40
+    LTEXT           "Surfaces Location",IDC_STATIC,11,68,63,10
+    CONTROL         "Hook DirectDraw",IDC_HOOKDD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,40,68,10
+    GROUPBOX        "FPS",IDC_STATIC,165,30,85,55
+    CONTROL         "Use GDI (low compatibility)",IDC_USEGDI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,53,134,10
+    CONTROL         "Capture Mouse Pointer",IDC_CAPTUREMOUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,156,88,10
+    LTEXT           "Resolution",IDC_STATIC,11,85,50,10
+    CONTROL         "Set Affinity to One Core",IDC_SETAFFINITY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,221,115,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "DXWnd is written by SFB7. Improved and released by www.old-games.ru\0"
+            VALUE "FileDescription", "Enables Windowed Mode/Changes Resolution for Fullscreen DirectX Games/Applications\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "dxwndhost\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "dxwndhost.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "dxwndhost\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_TARGET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TARGET DLGINIT
+BEGIN
+    IDC_SURFACETYPE, 0x403, 7, 0
+0x4128, 0x7475, 0x296f, "\000" 
+    IDC_SURFACETYPE, 0x403, 14, 0
+0x7953, 0x7473, 0x6d65, 0x4d20, 0x6d65, 0x726f, 0x0079, 
+    IDC_SURFACETYPE, 0x403, 13, 0
+0x6956, 0x6564, 0x206f, 0x654d, 0x6f6d, 0x7972, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "dxwndhost\n\nMfxtex\n\n\ndxwndhost.Document\nMfxtex Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "dxwndhost"
+    AFX_IDS_IDLEMESSAGE     "????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "??"
+    ID_INDICATOR_REC        "??"
+    ID_INDICATOR_KANA       "??"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "??????????\n??????"
+    ID_FILE_OPEN            "??????????\n??"
+    ID_FILE_CLOSE           "????????????\n???"
+    ID_FILE_SAVE            "????????????????\n??"
+    ID_FILE_SAVE_AS         "?????????????????\n????????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "???????????????????????????\n?????????"
+    ID_APP_EXIT             "????????????????????????\n??"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "??????????"
+    ID_FILE_MRU_FILE2       "??????????"
+    ID_FILE_MRU_FILE3       "??????????"
+    ID_FILE_MRU_FILE4       "??????????"
+    ID_FILE_MRU_FILE5       "??????????"
+    ID_FILE_MRU_FILE6       "??????????"
+    ID_FILE_MRU_FILE7       "??????????"
+    ID_FILE_MRU_FILE8       "??????????"
+    ID_FILE_MRU_FILE9       "??????????"
+    ID_FILE_MRU_FILE10      "??????????"
+    ID_FILE_MRU_FILE11      "??????????"
+    ID_FILE_MRU_FILE12      "??????????"
+    ID_FILE_MRU_FILE13      "??????????"
+    ID_FILE_MRU_FILE14      "??????????"
+    ID_FILE_MRU_FILE15      "??????????"
+    ID_FILE_MRU_FILE16      "??????????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "??????????????\n??????"
+    ID_PREV_PANE            "??????????????\n??????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "?????????????\n??"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "???????\n??"
+    ID_EDIT_CLEAR_ALL       "?????\n?????"
+    ID_EDIT_COPY            "????????????????????????\n????"
+    ID_EDIT_CUT             "???????????????????????\n????"
+    ID_EDIT_FIND            "??????????\n??"
+    ID_EDIT_PASTE           "??????????????????\n????"
+    ID_EDIT_REPEAT          "?????????????\n????"
+    ID_EDIT_REPLACE         "????????????????\n??"
+    ID_EDIT_SELECT_ALL      "????????????\n?????"
+    ID_EDIT_UNDO            "?????????????\n????"
+    ID_EDIT_REDO            "?????????????\n????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "????? ???? ??/???\n????? ??????????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "??????????????"
+    AFX_IDS_SCMOVE          "????????????"
+    AFX_IDS_SCMINIMIZE      "????????????"
+    AFX_IDS_SCMAXIMIZE      "????????????"
+    AFX_IDS_SCNEXTWINDOW    "??????????????"
+    AFX_IDS_SCPREVWINDOW    "??????????????"
+    AFX_IDS_SCCLOSE         "????????????????????????????"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "?????????????????"
+    AFX_IDS_SCTASKLIST      "??????????????"
+    IDS_STRINGABOUTBOX      "&About ..."
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\dxwndhost.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
